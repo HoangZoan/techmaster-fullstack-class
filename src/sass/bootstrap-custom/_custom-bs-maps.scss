@@ -1,0 +1,15 @@
+// COLOR
+$custom-theme-colors: (
+  "success": #55efc4,
+);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// DISPLAY
+
+// // SPACING
+$custom-spacers: (
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 9,
+);
+$spacers: map-merge($spacers, $custom-spacers);

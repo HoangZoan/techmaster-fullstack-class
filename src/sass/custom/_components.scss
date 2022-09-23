@@ -1,0 +1,116 @@
+// HERO
+.hero {
+  background-color: $primary;
+
+  @include media-breakpoint-up(lg) {
+    background-image: linear-gradient(106deg, $primary 55%, #fff 55%);
+  }
+
+  &__list {
+    width: 80%;
+
+    &__icon {
+      line-height: 30px;
+    }
+  }
+
+  button {
+    background-color: #fff;
+    border: none;
+
+    .fa-headset {
+      font-size: 24px;
+    }
+  }
+}
+
+// COURSE SESSIONS
+.course-sessions {
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+
+    .vertical-line {
+      width: 3px;
+      background-color: $primary;
+    }
+
+    &__list li {
+      position: relative;
+
+      .connect-line {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translate(-100%, -50%);
+        width: 48px;
+        height: 2px;
+        background-color: $primary;
+        display: none;
+
+        @include media-breakpoint-up(sm) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// LOCATION + TIME
+.location-time {
+  max-width: 480px;
+
+  hr {
+    border-width: 2px;
+    margin: 48px 0;
+  }
+
+  i {
+    font-size: 36px;
+    color: $primary;
+  }
+}
+
+// FAQ
+#faq {
+  .accordion {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+// CONTACT
+.contact {
+  .text-link:hover {
+    text-decoration: underline;
+  }
+}
+
+// COMPARE COURSES
+.compare-courses {
+  .tab-pane {
+    border: 1px solid #dee2e6;
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .compare-table {
+    td {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    tbody {
+      tr:first-child td {
+        padding-top: 16px;
+      }
+
+      tr:last-child td {
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
