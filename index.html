@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lộ trình Web Full Stack - ReactJS, NodeJS</title>
+    <link rel="icon" href="/src/images/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -12,14 +13,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./src/css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
   </head>
+
   <body>
-    <header>
+    <header class="fixed-top">
       <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="./src/images/logo-techmaster.png" alt="Techmaster logo">
+            <img src="./src/images/logo-techmaster.png" alt="Techmaster logo" />
           </a>
           <button
             class="navbar-toggler"
@@ -33,12 +39,14 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto fw-semibold">
               <li class="nav-item text-center py-2">
                 <a class="nav-link text-white" href="#introduce">GIỚI THIỆU</a>
               </li>
               <li class="nav-item text-center py-2">
-                <a class="nav-link text-white" href="#course-content">LỘ TRÌNH</a>
+                <a class="nav-link text-white" href="#course-content"
+                  >LỘ TRÌNH</a
+                >
               </li>
               <li class="nav-item text-center py-2">
                 <a class="nav-link text-white" href="#tuition">HỌC PHÍ</a>
@@ -55,14 +63,21 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-7 py-5 d-flex flex-column justify-content-center">
-              <h1 class="text-white mb-3">
+          <div class="row py-5">
+            <div
+              class="col-12 col-lg-7 d-flex flex-column justify-content-center"
+            >
+              <h1 class="text-white">
                 <div>Bootcamp Web Full Stack</div>
                 <div>ReactJS - NodeJS</div>
               </h1>
 
-              <h4 class="text-white mb-5">
+              <a href="#bootcamp" class="link-light text-link align-self-start">
+                <small>Tìm hiểu về Bootcamp, Web Full Stack</small>
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+
+              <h4 class="text-white mt-3 mb-5">
                 (Lộ trình chuyên sâu 6 tháng - 10 buổi/tuần)
               </h4>
 
@@ -100,7 +115,7 @@
                 </li>
               </ul>
 
-              <a href="#">
+              <a href="#contact">
                 <button class="btn btn-outline-primary">
                   <i class="fa-solid fa-headset me-2"></i>
                   <span class="h5 fw-normal">NHẬN TƯ VẤN</span>
@@ -158,27 +173,315 @@
         </div>
       </section>
 
+      <section id="bootcamp" class="py-5 py-lg-7 bg-primary">
+        <div class="container">
+          <h2 class="text-white mb-5 mb-lg-6 text-center">
+            CÓ GÌ Ở KHÓA HỌC BOOTCAMP TECHMASTER?
+          </h2>
+
+          <div class="row gx-5 gy-4">
+            <div class="col-12 col-lg-6">
+              <div
+                class="rounded shadow overflow-hidden d-flex flex-column h-100"
+              >
+                <div class="ratio ratio-5x3">
+                  <img
+                    src="./src/images/student-exchange.jpg"
+                    alt="Học viên Techmaster cùng làm việc nhóm"
+                  />
+                </div>
+
+                <div class="bg-white py-4 px-3 px-md-4 flex-fill">
+                  <h3 class="h5 mb-4">Bootcamp là gì?</h3>
+                  <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass me-2 text-primary"
+                      ></i
+                      >Bootcamp là một hình thức đào dưới dạng trại huấn luyện
+                      tập trung (từ 4 đến hơn 6 tháng), lấy ý tưởng từ môi
+                      trường quân đội và được ưa chuộng áp dụng tại các tập
+                      đoàn, học viện.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass me-2 text-primary"
+                      ></i
+                      >Khác với trường học, hướng đào tạo của bootcamp tập trung
+                      vào việc giải quyết vấn đề thực tế tại các doanh nghiệp.
+                      Áp dụng mô hình làm việc sâu (deep working), sử dụng lý
+                      thuyết đã học vào giải quyết vấn đề ngay trong buổi học.
+                      Không có bài tập về nhà, kết thúc buổi học học viên có thể
+                      về nghỉ ngơi, chơi thể thao, giải trí để nạp lại năng
+                      lượng.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass me-2 text-primary"
+                      ></i
+                      >Chi phí trung bình cho một buổi học rẻ hơn so với các
+                      khóa học ngắn hạn khác có thời lượng 3 đến 5 buổi/tuần
+                      dành cho các đối tượng đang đi học hoặc đi làm.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="rounded shadow overflow-hidden d-flex flex-column h-100"
+              >
+                <div class="ratio ratio-5x3">
+                  <img
+                    src="./src/images/fullstack.webp"
+                    alt="Học viên Techmaster cùng làm việc nhóm"
+                  />
+                </div>
+
+                <div class="bg-white py-4 px-3 px-md-4 flex-fill">
+                  <h3 class="h5 mb-4">
+                    Công việc của một lập trình viên Full Stack?
+                  </h3>
+                  <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass me-2 text-primary"
+                      ></i
+                      ><span class="fw-semibold">Lập trình Front End:</span> Bạn
+                      là người thiết kế, tạo ra giao diện ứng dụng web dành cho
+                      người dùng. Xử lý các logic nghiệp vụ để người dùng có
+                      trải nghiệm tốt nhất khi sử dụng ứng dụng của bạn. Bạn có
+                      từng muốn đập máy đi cho rồi vì một ứng dụng hoạt động ngớ
+                      ngẩn? Nếu có, bạn là một con người của Front End.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass me-2 text-primary"
+                      ></i
+                      ><span class="fw-semibold">Lập trình Back End:</span> Bạn
+                      là người thiết kế và xây dựng kho dữ liệu thông tin của
+                      ứng dụng. Hơn nữa, bạn còn có vai trò đảm bảo cho hệ thống
+                      hoạt động tối ưu và bảo mật. Làm về data là chỉ làm về dữ
+                      liệu khách hàng? Doanh nghiệp hiện đại nói không với tài
+                      liệu giấy nhập liệu bằng tay.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass me-2 text-primary"
+                      ></i
+                      ><span class="fw-semibold">Lập trình Full Stack:</span>
+                      Tại sao không phải là cả 2? 😎
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5 py-lg-7">
+        <h2 class="text-primary mb-5 mb-lg-6 text-center">
+          HỌC GÌ ĐỂ TRỞ THÀNH LẬP TRÌNH VIÊN FULL STACK?
+        </h2>
+
+        <div class="row">
+          <div class="col-4">
+            <div
+              class="rounded border border-secondary shadow-sm overflow-hidden d-flex flex-column h-100"
+            >
+              <div>
+                <img
+                  src="./src/images/web-basics.webp"
+                  alt="HTML, CSS, JavaScript"
+                />
+              </div>
+
+              <div class="px-3 py-4 flex-fill">
+                <h3 class="h5 text-center mb-3">HTML, CSS, JavaScript</h3>
+
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    <span class="fw-semibold">HTML, CSS:</span>
+                    Ngôn ngữ nhập môn của giới lập trình web. Dễ học nhưng khó
+                    để trở thành chuyên gia.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    <span class="fw-semibold">JavaScript:</span>
+                    Ngôn ngữ kịch bản có cộng đồng sử dụng đông đảo nhất hiện
+                    nay. Thích hợp để phát triển lên các framework nổi tiếng như
+                    React, Vue, Angular và NodeJS.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              class="rounded border border-secondary shadow-sm overflow-hidden rounded border border-secondary shadow-sm overflow-hidden d-flex flex-column h-100"
+            >
+              <div>
+                <img
+                  src="./src/images/reactjs.jpg"
+                  alt="HTML, CSS, JavaScript"
+                />
+              </div>
+
+              <div class="px-3 py-4">
+                <h3 class="h5 text-center mb-3">ReactJS</h3>
+
+                <ul class="list-unstyled d-flex flex-column gap-2 flex-fill">
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    Được phát triển bởi Facebook (Metaverse), ra mắt lần đầu
+                    tiên từ năm 2011. Đến nay luôn nằm trong top đầu thư viện
+                    Front End phổ biến nhất ở trên thế giới và Việt Nam.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    Mức lương sau 1 năm đi làm đạt từ 1000 USD trở lên, có thể
+                    lên đến 2000 USD kết hợp với khả năng ngoại ngữ.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    Ứng dụng phát triển bởi ReactJS:
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.facebook.com/"
+                      >Facebook</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.instagram.com/"
+                      >Instagram</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.netflix.com/"
+                      >Netflix</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.netflix.com/"
+                      >Uber</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.airbnb.com.vn/"
+                      >Airbnb</a
+                    >.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div
+              class="rounded border border-secondary shadow-sm overflow-hidden rounded border border-secondary shadow-sm overflow-hidden d-flex flex-column h-100"
+            >
+              <div>
+                <img
+                  src="./src/images/nodejs.png"
+                  alt="HTML, CSS, JavaScript"
+                />
+              </div>
+
+              <div class="px-3 py-4">
+                <h3 class="h5 text-center mb-3">NodeJS</h3>
+
+                <ul class="list-unstyled d-flex flex-column gap-2 flex-fill">
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    Node. js được phát triển dưới sự bảo trợ của Joyent, công ty
+                    phần mềm chuyên về điện toán đám mây có trụ sở tại San
+                    Francisco, California. Hiện nay đang là thành viên của
+                    Samsung Electronics.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    Với kinh nghiệm từ 1 năm trở lên có thể đạt từ 1000 USD và
+                    lên đến 3000 USD (dựa theo quy mô dự án và khả năng ngoại
+                    ngữ).
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-success"></i>
+                    Ứng dụng phát triển bởi NodeJS:
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.nasa.gov/"
+                      >NASA</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://twitter.com/"
+                      >Twitter</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.linkedin.com/"
+                      >Linkedin</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://www.ebay.com/"
+                      >Ebay</a
+                    >,
+                    <a
+                      class="link-primary"
+                      target="_blank"
+                      href="https://trello.com/"
+                      >Trello</a
+                    >.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="course-features bg-primary py-5 py-lg-7">
         <div class="container">
           <h2 class="text-white mb-5 mb-lg-6 text-center">LỢI ÍCH KHÓA HỌC</h2>
           <div class="row align-items-center gx-5 gy-4">
             <div class="col-12 col-lg-6">
               <ul class="list-unstyled text-white lead fw-normal">
-                <li class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3">
+                <li
+                  class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3"
+                >
                   Khóa học cường độ cao, rèn không chỉ chuyên môn mà còn các kỹ
                   năng mềm
                 </li>
-                <li class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3">
+                <li
+                  class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3"
+                >
                   Thời gian ngắn hơn, hiệu quả cao hơn
                 </li>
-                <li class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3">
+                <li
+                  class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3"
+                >
                   Học tập và làm việc trực tiếp với các chuyên gia trong 6 tháng
                 </li>
-                <li class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3">
+                <li
+                  class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2 mb-4 mb-lg-3"
+                >
                   Giúp thích ứng với môi trường làm việc chuyên nghiệp ngay từ
                   khi học
                 </li>
-                <li class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2">
+                <li
+                  class="border border-white border-2 rounded px-3 py-2 py-md-4 py-lg-2"
+                >
                   Vì tính hiệu quả của nó, những khóa học bootcamp đã được ứng
                   dụng rộng rãi trong các học viện, tập đoàn công nghệ trên thế
                   giới
@@ -188,7 +491,7 @@
 
             <div class="col-12 col-lg-6">
               <img
-                src="./src/images/course-features.png"
+                src="./src/images/course-features.jpg"
                 alt="Giảng viên Techmaster hướng dẫn học viên thực hành"
               />
             </div>
@@ -196,14 +499,17 @@
         </div>
       </section>
 
-      <section id="course-content" class="course-sessions py-5 py-lg-7 container">
+      <section
+        id="course-content"
+        class="course-sessions py-5 py-lg-7 container"
+      >
         <h2 class="text-primary mb-5 mb-lg-6 text-center">NỘI DUNG KHÓA HỌC</h2>
 
         <div class="course-sessions__content d-flex justify-content-center">
           <div class="vertical-line me-5 d-none d-sm-block"></div>
 
           <ul class="course-sessions__content__list list-unstyled mb-0">
-            <li class="bg-secondary rounded py-4 px-4 mb-5">
+            <li class="bg-secondary rounded py-4 px-4 mb-5 shadow-sm">
               <div class="connect-line"></div>
 
               <h3 class="h4 mb-4">Web căn bản (HTML, CSS)</h3>
@@ -230,7 +536,7 @@
                 <li class="py-1">- Quản lý mã nguồn với Git & Github​.</li>
               </ul>
             </li>
-            <li class="bg-secondary rounded py-4 px-4 mb-5">
+            <li class="bg-secondary rounded py-4 px-4 mb-5 shadow-sm">
               <div class="connect-line"></div>
 
               <h3 class="h4 mb-4">JavaScript</h3>
@@ -246,7 +552,7 @@
                 <li class="py-1">- Async JavaScript. Xử lý HTTP Request.</li>
               </ul>
             </li>
-            <li class="bg-secondary rounded py-4 px-4 mb-5">
+            <li class="bg-secondary rounded py-4 px-4 mb-5 shadow-sm">
               <div class="connect-line"></div>
 
               <h3 class="h4 mb-4">Thiết kế UI/UX</h3>
@@ -268,7 +574,7 @@
                 </li>
               </ul>
             </li>
-            <li class="bg-secondary rounded py-4 px-4 mb-5">
+            <li class="bg-secondary rounded py-4 px-4 mb-5 shadow-sm">
               <div class="connect-line"></div>
 
               <h3 class="h4 mb-4">Đồ án web tĩnh</h3>
@@ -284,7 +590,7 @@
                 </li>
               </ul>
             </li>
-            <li class="bg-secondary rounded py-4 px-4 mb-5">
+            <li class="bg-secondary rounded py-4 px-4 mb-5 shadow-sm">
               <div class="connect-line"></div>
 
               <h3 class="h4 mb-4">ReactJS</h3>
@@ -304,14 +610,14 @@
                 </li>
               </ul>
             </li>
-            <li class="bg-secondary rounded py-4 px-4 mb-5">
+            <li class="bg-secondary rounded py-4 px-4 mb-5 shadow-sm">
               <div class="connect-line"></div>
 
               <h3 class="h4 mb-4">NodeJS</h3>
 
               <ul class="list-unstyled lead fw-normal">
                 <li class="py-1">
-                  - Lập trình full-stack với JavaScript ecosystem phổ biến nhất
+                  - Lập trình Full Stack với JavaScript ecosystem phổ biến nhất
                   hiện nay: ReactJS + NodeJS.
                 </li>
                 <li class="py-1">
@@ -323,10 +629,10 @@
                 </li>
               </ul>
             </li>
-            <li class="bg-secondary rounded py-4 px-4">
+            <li class="bg-secondary rounded py-4 px-4 shadow-sm">
               <div class="connect-line"></div>
 
-              <h3 class="h4 mb-4">Đồ án web full-stack</h3>
+              <h3 class="h4 mb-4">Đồ án web Full Stack</h3>
 
               <ul class="list-unstyled lead fw-normal">
                 <li class="py-1">
@@ -338,7 +644,7 @@
                 <li class="py-1">
                   - Trang web có đầy đủ tính năng như một dự án thực tế như:
                   đăng nhập/xuất tài khoản, quản lý thông tin người dùng và sản
-                  phẩm, logic nghiệp vụ...
+                  phẩm, xử lý logic nghiệp vụ...
                 </li>
               </ul>
             </li>
@@ -351,8 +657,12 @@
           <h2 class="text-white mb-5 mb-lg-6 text-center">CAM KẾT</h2>
 
           <div class="container">
-            <ul class="list-unstyled row gap-5 gap-xl-4 gap-xxl-5 justify-content-center">
-              <li class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded">
+            <ul
+              class="list-unstyled row gap-5 gap-xl-4 gap-xxl-5 justify-content-center"
+            >
+              <li
+                class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded"
+              >
                 <div class="w-25 mx-auto mb-4">
                   <img src="./src/images/pencil.png" alt="Web icon" />
                 </div>
@@ -360,13 +670,17 @@
                   <span class="text-primary h3">70%</span> thời lượng thực hành
                 </h3>
               </li>
-              <li class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded">
+              <li
+                class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded"
+              >
                 <div class="w-25 mx-auto mb-4">
                   <img src="./src/images/webinar.png" alt="Web icon" />
                 </div>
                 <h3 class="h5">Giáo trình online sử dụng vĩnh viễn</h3>
               </li>
-              <li class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded">
+              <li
+                class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded"
+              >
                 <div class="w-25 mx-auto mb-4">
                   <img src="./src/images/webinar.png" alt="Web icon" />
                 </div>
@@ -375,80 +689,175 @@
                   giáo khảo từ các công ty công nghệ lớn
                 </h3>
               </li>
-              <li class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded">
+              <li
+                class="col-12 col-md-5 col-xl bg-white text-center py-4 px-3 rounded"
+              >
                 <div class="w-25 mx-auto mb-4">
                   <img src="./src/images/handshake.png" alt="Web icon" />
                 </div>
                 <h3 class="h5">Cam kết việc làm sau khi hoàn thành khóa học</h3>
               </li>
-            </div>
+            </ul>
           </div>
         </div>
       </section>
 
       <section class="compare-courses container py-5 py-lg-7">
-        <h2 class="text-primary mb-5 mb-lg-6 text-center">SO SÁNH HÌNH THỨC HỌC</h2>
+        <h2 class="text-primary mb-5 mb-lg-6 text-center">
+          SO SÁNH HÌNH THỨC HỌC
+        </h2>
 
         <div class="d-lg-none">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item flex-fill" role="presentation">
-              <button class="nav-link fw-semibold w-100 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">LỚP BOOTCAMP</button>
+              <button
+                class="nav-link fw-semibold w-100 active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="home-tab-pane"
+                aria-selected="true"
+              >
+                LỚP BOOTCAMP
+              </button>
             </li>
             <li class="nav-item flex-fill" role="presentation">
-              <button class="nav-link fw-semibold w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">LỚP BUỔI TỐI</button>
+              <button
+                class="nav-link fw-semibold w-100"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="profile-tab-pane"
+                aria-selected="false"
+              >
+                LỚP BUỔI TỐI
+              </button>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
-            <ul class="list-unstyled rounded-bottom p-3 tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <ul
+              class="list-unstyled rounded-bottom p-3 tab-pane fade show active"
+              id="home-tab-pane"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+              tabindex="0"
+            >
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Học sinh tốt nghiệp cấp 3, thực tập sinh từ Hàn Quốc, Nhật Bản về nước, người trái ngành. Phù hợp bạn tốt nghiệp cấp 3.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Học sinh tốt nghiệp cấp 3, thực tập sinh từ Hàn Quốc, Nhật Bản
+                về nước, người trái ngành. Phù hợp bạn tốt nghiệp cấp 3.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Một tuần học 5 ngày x 2 buổi x 3 tiếng.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Một tuần học 5 ngày x 2 buổi x 3 tiếng.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>6 tháng gồm 5 tháng học toàn thời gian + 1 tháng đi thực tập doanh nghiệp, tối học 3 buổi 1 tuần trực tuyến nâng cao.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >6 tháng gồm 5 tháng học toàn thời gian + 1 tháng đi thực tập
+                doanh nghiệp, tối học 3 buổi 1 tuần trực tuyến nâng cao.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Mô hình đào tạo boot camp, làm việc nhóm. Giảng viên dạy 40%, trợ giảng hướng dẫn 60%.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Mô hình đào tạo boot camp, làm việc nhóm. Giảng viên dạy 40%,
+                trợ giảng hướng dẫn 60%.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Thời gian học nhiều, giúp sinh viên rèn luyện, thực hành 100% tại lớp.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Thời gian học nhiều, giúp sinh viên rèn luyện, thực hành 100%
+                tại lớp.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Chi phí từng buổi học thấp.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Chi phí từng buổi học thấp.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Bắt buộc phải đến lớp học. Học như đi làm thật.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Bắt buộc phải đến lớp học. Học như đi làm thật.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Phương pháp học: làm nhiều quen tay với rất rất nhiều bài tập từ dễ đến khó.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Phương pháp học: làm nhiều quen tay với rất rất nhiều bài tập
+                từ dễ đến khó.
               </li>
             </ul>
-            <ul class="list-unstyled rounded-bottom p-3 tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <ul
+              class="list-unstyled rounded-bottom p-3 tab-pane fade"
+              id="profile-tab-pane"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+              tabindex="0"
+            >
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Nhân viên văn phòng, sinh viên chỉ có thể học buổi tối. Phù hợp với những bạn đang học đại học hoặc tốt nghiệp đại học.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Nhân viên văn phòng, sinh viên chỉ có thể học buổi tối. Phù hợp
+                với những bạn đang học đại học hoặc tốt nghiệp đại học.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Một tuần học 3 buổi x 3 tiếng.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Một tuần học 3 buổi x 3 tiếng.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Học 5.5 tháng hoặc 7 tháng tuỳ chuyên ngành.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Học 5.5 tháng hoặc 7 tháng tuỳ chuyên ngành.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Mô hình đào tạo seminar kết hợp thực hành lab. Giảng viên dạy. Sinh viên chủ động làm bài tập ở nhà.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Mô hình đào tạo seminar kết hợp thực hành lab. Giảng viên dạy.
+                Sinh viên chủ động làm bài tập ở nhà.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Thời gian học không ảnh hưởng đến công việc hay việc học ở trường.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Thời gian học không ảnh hưởng đến công việc hay việc học ở
+                trường.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Tổng chi phí khoá học thấp.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Tổng chi phí khoá học thấp.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Sinh viên có thể học trực tuyến từ xa hoặc kết hợp.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Sinh viên có thể học trực tuyến từ xa hoặc kết hợp.
               </li>
               <li>
-                <i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Phương pháp học: chủ động, tích cực tìm hiểu, giải quyết vấn đề với sự hướng dẫn của giảng viên.
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Phương pháp học: chủ động, tích cực tìm hiểu, giải quyết vấn đề
+                với sự hướng dẫn của giảng viên.
               </li>
             </ul>
           </div>
@@ -456,101 +865,258 @@
 
         <table class="compare-table table table-borderless d-none d-lg-table">
           <colgroup>
-            <col class="bg-secondary">
+            <col class="bg-secondary" />
           </colgroup>
           <thead>
-            <tr class="text-center ">
-              <th class="h5 py-3 text-primary border-bottom border-primary border-1">LỚP BOOTCAMP</th>
-              <th class="h5 py-3 text-primary border-bottom border-primary border-1">LỚP BUỔI TỐI</th>
+            <tr class="text-center">
+              <th
+                class="h5 py-3 text-primary border-bottom border-primary border-1"
+              >
+                LỚP BOOTCAMP
+              </th>
+              <th
+                class="h5 py-3 text-primary border-bottom border-primary border-1"
+              >
+                LỚP BUỔI TỐI
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Học sinh tốt nghiệp cấp 3, thực tập sinh từ Hàn Quốc, Nhật Bản về nước, người trái ngành. Phù hợp bạn tốt nghiệp cấp 3.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Học sinh tốt nghiệp cấp 3, thực tập sinh từ Hàn Quốc, Nhật Bản
+                về nước, người trái ngành. Phù hợp bạn tốt nghiệp cấp 3.
               </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Nhân viên văn phòng, sinh viên chỉ có thể học buổi tối. Phù hợp với những bạn đang học đại học hoặc tốt nghiệp đại học.
-              </td>
-            </tr>
-            <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Một tuần học 5 ngày x 2 buổi x 3 tiếng.
-              </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Một tuần học 3 buổi x 3 tiếng.
-              </td>
-            </tr>
-            <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>6 tháng gồm 5 tháng học toàn thời gian + 1 tháng đi thực tập doanh nghiệp, tối học 3 buổi 1 tuần trực tuyến nâng cao.
-              </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Học 5.5 tháng hoặc 7 tháng tuỳ chuyên ngành.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Nhân viên văn phòng, sinh viên chỉ có thể học buổi tối. Phù hợp
+                với những bạn đang học đại học hoặc tốt nghiệp đại học.
               </td>
             </tr>
             <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Mô hình đào tạo boot camp, làm việc nhóm. Giảng viên dạy 40%, trợ giảng hướng dẫn 60%.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Một tuần học 5 ngày x 2 buổi x 3 tiếng.
               </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Mô hình đào tạo seminar kết hợp thực hành lab. Giảng viên dạy. Sinh viên chủ động làm bài tập ở nhà.
-              </td>
-            </tr>
-            <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Thời gian học nhiều, giúp sinh viên rèn luyện, thực hành 100% tại lớp.
-              </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Thời gian học không ảnh hưởng đến công việc hay việc học ở trường.
-              </td>
-            </tr>
-            <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Chi phí từng buổi học thấp.
-              </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Tổng chi phí khoá học thấp.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Một tuần học 3 buổi x 3 tiếng.
               </td>
             </tr>
             <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Bắt buộc phải đến lớp học. Học như đi làm thật.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >6 tháng gồm 5 tháng học toàn thời gian + 1 tháng đi thực tập
+                doanh nghiệp, tối học 3 buổi 1 tuần trực tuyến nâng cao.
               </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Sinh viên có thể học trực tuyến từ xa hoặc kết hợp.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Học 5.5 tháng hoặc 7 tháng tuỳ chuyên ngành.
               </td>
             </tr>
             <tr>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Phương pháp học: làm nhiều quen tay với rất rất nhiều bài tập từ dễ đến khó.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Mô hình đào tạo boot camp, làm việc nhóm. Giảng viên dạy 40%,
+                trợ giảng hướng dẫn 60%.
               </td>
-              <td><i class="fa-solid fa-circle-chevron-right me-2 text-primary"></i>Phương pháp học: chủ động, tích cực tìm hiểu, giải quyết vấn đề với sự hướng dẫn của giảng viên.
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Mô hình đào tạo seminar kết hợp thực hành lab. Giảng viên dạy.
+                Sinh viên chủ động làm bài tập ở nhà.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Thời gian học nhiều, giúp sinh viên rèn luyện, thực hành 100%
+                tại lớp.
+              </td>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Thời gian học không ảnh hưởng đến công việc hay việc học ở
+                trường.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Chi phí từng buổi học thấp.
+              </td>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Tổng chi phí khoá học thấp.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Bắt buộc phải đến lớp học. Học như đi làm thật.
+              </td>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Sinh viên có thể học trực tuyến từ xa hoặc kết hợp.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Phương pháp học: làm nhiều quen tay với rất rất nhiều bài tập
+                từ dễ đến khó.
+              </td>
+              <td>
+                <i
+                  class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                ></i
+                >Phương pháp học: chủ động, tích cực tìm hiểu, giải quyết vấn đề
+                với sự hướng dẫn của giảng viên.
               </td>
             </tr>
           </tbody>
         </table>
+
+        <div class="row mt-5 mt-lg-6 justify-content-center">
+          <div class="col col-lg-8">
+            <div class="swiper gallery-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-1.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-2.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-3.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-4.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-5.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-6.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-7.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-8.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./src/images/class-gallery/gallery-9.jpg"
+                    alt="Hoạt động học tập tại Techmaster"
+                  />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="tuition" class="tuition bg-primary py-5 py-lg-7">
         <div class="container">
           <h2 class="text-white mb-5 mb-lg-6 text-center">HỌC PHÍ</h2>
-  
+
           <ul class="list-unstyled row gap-5 justify-content-center px-3">
-            <li class="col-12 col-md-5 col-lg d-flex flex-column text-center bg-white shadow rounded px-3 py-5">
+            <li
+              class="col-12 col-md-5 col-lg d-flex flex-column text-center bg-white shadow rounded px-3 py-5 shadow"
+            >
               <h4 class="fw-normal text-uppercase mb-6">Đóng trọn gói</h4>
-  
+
               <h4 class="text-primary mb-6">42.000.000đ</h4>
-  
+
               <a class="d-block mt-auto" href="#contact">
                 <button class="btn btn-primary">
                   <span class="fw-normal h5">ĐĂNG KÝ</span>
                 </button>
               </a>
             </li>
-            <li class="col-12 col-md-5 col-lg d-flex flex-column text-center bg-white shadow rounded px-3 py-5">
+            <li
+              class="col-12 col-md-5 col-lg d-flex flex-column text-center bg-white shadow rounded px-3 py-5 shadow"
+            >
               <h4 class="fw-normal text-uppercase mb-6">Đóng theo kỳ</h4>
-  
+
               <h4 class="text-primary mb-3">43.000.000đ</h4>
-              <p class="fw-semibold text-muted mb-5">Tương đương 21.5 triệu/kỳ</p>
-  
+              <p class="fw-semibold text-muted mb-5">
+                Tương đương 21.5 triệu/kỳ
+              </p>
+
               <a class="d-block mt-auto" href="#contact">
                 <button class="btn btn-primary">
                   <span class="fw-normal h5">ĐĂNG KÝ</span>
                 </button>
               </a>
             </li>
-            <li class="col-12 col-md-5 col-lg d-flex flex-column text-center bg-white shadow rounded px-3 py-5">
+            <li
+              class="col-12 col-md-5 col-lg d-flex flex-column text-center bg-white shadow rounded px-3 py-5 shadow"
+            >
               <h4 class="fw-normal text-uppercase mb-6">Đóng theo tháng</h4>
-  
+
               <h4 class="text-primary mb-3">44.000.000đ</h4>
-              <p class="fw-semibold text-muted mb-5">Tương đương 7.4 triệu/tháng</p>
-  
+              <p class="fw-semibold text-muted mb-5">
+                Tương đương 7.4 triệu/tháng
+              </p>
+
               <a class="d-block mt-auto" href="#contact">
                 <button class="btn btn-primary">
                   <span class="fw-normal h5">ĐĂNG KÝ</span>
@@ -563,146 +1129,591 @@
 
       <section class="bg-primary pb-5 pb-lg-7 mx-auto">
         <div class="container location-time">
-          <h2 class="text-white mb-5 mb-lg-6 text-center">THỜI GIAN & ĐỊA ĐIỂM</h2>
-  
+          <h2 class="text-white mb-5 mb-lg-6 text-center">
+            THỜI GIAN & ĐỊA ĐIỂM
+          </h2>
+
           <div class="shadow p-5 rounded bg-white">
             <div class="row">
               <div class="col-auto">
                 <i class="fa-regular fa-calendar-days"></i>
               </div>
               <div class="col">
-                <div class="lead fw-semibold mb-2">Lịch học: Thứ hai - Thứ sáu.</div>
+                <div class="lead fw-semibold mb-2">
+                  Lịch học: Thứ hai - Thứ sáu.
+                </div>
                 <div class="lead fw-semibold mb-2">Ca sáng: 9h - 12h.</div>
                 <div class="lead fw-semibold">Ca sáng: 14h - 17h.</div>
               </div>
             </div>
-            <hr class="border-primary opacity-100">
+            <hr class="border-primary opacity-100" />
             <div class="row">
               <div class="col-auto">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
               <div class="col">
-                <div class="lead fw-semibold">Cơ sở 2: Tầng 12A, Viwaseen Tower, 48 Tố Hữu, Nam Từ Liêm, Hà Nội.</div>
+                <div class="lead fw-semibold">
+                  Cơ sở 2: Tầng 12A, Viwaseen Tower, 48 Tố Hữu, Nam Từ Liêm, Hà
+                  Nội.
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section class="container py-5 py-lg-7">
+        <h2 class="text-primary mb-5 mb-lg-6 text-center">SẢN PHẨM HỌC VIÊN</h2>
+
+        <!-- Swiper -->
+        <div class="swiper student-projects-swiper py-2">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide rounded overflow-hidden shadow-sm pb-4 border border-secondary border-2 border border-secondary border-2"
+            >
+              <div class="ratio ratio-16x9 mb-4">
+                <!-- <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/b92PHpkmOF4?target=_blank"
+                >
+                </iframe> -->
+              </div>
+
+              <h4 class="text-primary text-center mb-3">Tech Galaxy</h4>
+
+              <ul class="list-unstyled px-4 d-flex flex-column gap-2 mb-4">
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Trang bán hàng máy tính, điện thoại.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Học viên: <span class="fw-semibold">Vũ Hoài Sơn</span>.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Lớp: <span class="fw-semibold">Web Frontend 25</span>.
+                </li>
+              </ul>
+
+              <a
+                href="https://liked95.github.io/FinalProject-TechGalaxy/html/"
+                class="d-block text-center"
+                target="_blank"
+              >
+                <button class="btn btn-primary">Link sản phẩm</button>
+              </a>
+            </div>
+            <div
+              class="swiper-slide rounded overflow-hidden shadow-sm pb-4 border border-secondary border-2"
+            >
+              <div class="ratio ratio-16x9 mb-4">
+                <!-- <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/4ipoxl60aPc"
+                >
+                </iframe> -->
+              </div>
+
+              <h4 class="text-primary text-center mb-3">VLUXURY</h4>
+
+              <ul class="list-unstyled px-4 d-flex flex-column gap-2 mb-4">
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Trang bán hàng sơ mi, đồ âu nam.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Học viên: <span class="fw-semibold">Phạm Văn Cường</span>.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Lớp: <span class="fw-semibold">Web Frontend 19</span>.
+                </li>
+              </ul>
+
+              <a
+                href="https://phamvancuong9x.github.io/vluxuryfashion/"
+                class="d-block text-center"
+                target="_blank"
+              >
+                <button class="btn btn-primary">Link sản phẩm</button>
+              </a>
+            </div>
+            <div
+              class="swiper-slide rounded overflow-hidden shadow-sm pb-4 border border-secondary border-2"
+            >
+              <div class="ratio ratio-16x9 mb-4">
+                <!-- <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/CtRjaOOGaDc"
+                >
+                </iframe> -->
+              </div>
+
+              <h4 class="text-primary text-center mb-3">FLONE</h4>
+
+              <ul class="list-unstyled px-4 d-flex flex-column gap-2 mb-4">
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Trang bán hàng quần áo nam, nữ.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Học viên: <span class="fw-semibold">Nguyễn Công Minh</span>.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Lớp: <span class="fw-semibold">Web Frontend 19</span>.
+                </li>
+              </ul>
+
+              <a
+                href="https://shop-ts-omega.vercel.app/"
+                class="d-block text-center"
+                target="_blank"
+              >
+                <button class="btn btn-primary">Link sản phẩm</button>
+              </a>
+            </div>
+            <div
+              class="swiper-slide rounded overflow-hidden shadow-sm pb-4 border border-secondary border-2"
+            >
+              <div class="ratio ratio-16x9 mb-4">
+                <!-- <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/Z8zzxYnvLKY"
+                >
+                </iframe> -->
+              </div>
+
+              <h4 class="text-primary text-center mb-3">STRAVEL</h4>
+
+              <ul class="list-unstyled px-4 d-flex flex-column gap-2 mb-4">
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Trang dịch vụ tour du lịch.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Học viên:
+                  <span class="fw-semibold">Nguyễn Minh Nhật Dương</span>.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Lớp: <span class="fw-semibold">Web Frontend 18</span>.
+                </li>
+              </ul>
+
+              <a
+                href="https://stravel.vercel.app/"
+                class="d-block text-center"
+                target="_blank"
+              >
+                <button class="btn btn-primary">Link sản phẩm</button>
+              </a>
+            </div>
+            <div
+              class="swiper-slide rounded overflow-hidden shadow-sm pb-4 border border-secondary border-2"
+            >
+              <div class="ratio ratio-16x9 mb-4">
+                <!-- <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/0tfZXQA2mMI"
+                >
+                </iframe> -->
+              </div>
+
+              <h4 class="text-primary text-center mb-3">DINO STORE</h4>
+
+              <ul class="list-unstyled px-4 d-flex flex-column gap-2 mb-4">
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Trang bán giày thời trang.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Học viên:
+                  <span class="fw-semibold">Bùi Duy Bình</span>.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Lớp: <span class="fw-semibold">Web Frontend 22</span>.
+                </li>
+              </ul>
+
+              <a
+                href="https://final-project-chi-dun.vercel.app/detail.html"
+                class="d-block text-center"
+                target="_blank"
+              >
+                <button class="btn btn-primary">Link sản phẩm</button>
+              </a>
+            </div>
+            <div
+              class="swiper-slide rounded overflow-hidden shadow-sm pb-4 border border-secondary border-2"
+            >
+              <div class="ratio ratio-16x9 mb-4">
+                <!-- <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/QoyblB0xp1o"
+                >
+                </iframe> -->
+              </div>
+
+              <h4 class="text-primary text-center mb-3">COFFEE CUP</h4>
+
+              <ul class="list-unstyled px-4 d-flex flex-column gap-2 mb-4">
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Trang đặt hàng đồ uống, cà phê.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Học viên:
+                  <span class="fw-semibold">Bùi Văn Vinh</span>.
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle-chevron-right me-2 text-primary"
+                  ></i>
+                  Lớp: <span class="fw-semibold">Web Frontend 20</span>.
+                </li>
+              </ul>
+
+              <a
+                href="https://coffee-cup-react-vinhbuihd.vercel.app/"
+                class="d-block text-center"
+                target="_blank"
+              >
+                <button class="btn btn-primary">Link sản phẩm</button>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
       <section id="faq" class="container py-5 py-lg-7">
-        <h2 class="text-primary mb-5 mb-lg-6 text-center">CÂU HỎI THƯỜNG GẶP</h2>
+        <h2 class="text-primary mb-5 mb-lg-6 text-center">
+          CÂU HỎI THƯỜNG GẶP
+        </h2>
 
         <div class="accordion">
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-1">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-1" aria-expanded="false" aria-controls="panel-collapse-1">
-                <span class="h6">Ưu điểm và nhược điểm của lớp toàn thời gian?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-1"
+                aria-expanded="false"
+                aria-controls="panel-collapse-1"
+              >
+                <span class="h6"
+                  >Ưu điểm và nhược điểm của lớp toàn thời gian?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-1" class="accordion-collapse collapse" aria-labelledby="panel-heading-1">
+            <div
+              id="panel-collapse-1"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-1"
+            >
               <div class="accordion-body">
                 <ul class="list-unstyled">
-                  <li>- <span class="fw-semibold">Ưu điểm:</span> Kỷ luật, tập trung, làm việc nhóm, thực hành nhiều, tương tác mạnh.</li>
-                  <li>- <span class="fw-semibold">Nhược điểm:</span> Yêu cầu người học phải dành trọn 5 tháng học toàn thời gian tại phòng lab.</li>
-                  <li>- <span class="fw-semibold">Học phí lớp toàn thời gian so với lớp tối:</span> Tổng số giờ học tại lớp có giảng viên và trợ giảng hướng dẫn của lớp toàn thời gian so với lớp buổi tối là 10 buổi / 3 buổi trong 1 tuần. Học phí có đắt hơn, nhưng chia theo số buổi học thì rẻ hơn.</li>
-                  <li>- <span class="fw-semibold">Đối tượng học lớp toàn thời gian:</span> tối thiểu tốt nghiệp cấp 3.</li>
+                  <li>
+                    - <span class="fw-semibold">Ưu điểm:</span> Kỷ luật, tập
+                    trung, làm việc nhóm, thực hành nhiều, tương tác mạnh.
+                  </li>
+                  <li>
+                    - <span class="fw-semibold">Nhược điểm:</span> Yêu cầu người
+                    học phải dành trọn 5 tháng học toàn thời gian tại phòng lab.
+                  </li>
+                  <li>
+                    -
+                    <span class="fw-semibold"
+                      >Học phí lớp toàn thời gian so với lớp tối:</span
+                    >
+                    Tổng số giờ học tại lớp có giảng viên và trợ giảng hướng dẫn
+                    của lớp toàn thời gian so với lớp buổi tối là 10 buổi / 3
+                    buổi trong 1 tuần. Học phí có đắt hơn, nhưng chia theo số
+                    buổi học thì rẻ hơn.
+                  </li>
+                  <li>
+                    -
+                    <span class="fw-semibold"
+                      >Đối tượng học lớp toàn thời gian:</span
+                    >
+                    tối thiểu tốt nghiệp cấp 3.
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-2" aria-expanded="false" aria-controls="panel-collapse-2">
-                <span class="h6">Tại sao lớp toàn thời gian lại có tháng cuối cùng học trực tuyến?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-2"
+                aria-expanded="false"
+                aria-controls="panel-collapse-2"
+              >
+                <span class="h6"
+                  >Tại sao lớp toàn thời gian lại có tháng cuối cùng học trực
+                  tuyến?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-2" class="accordion-collapse collapse" aria-labelledby="panel-heading-2">
+            <div
+              id="panel-collapse-2"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-2"
+            >
               <div class="accordion-body">
-                5 tháng đầu tiên, sinh viên bắt buộc phải học toàn thời gian tại trung tâm. Tháng thứ 6 sinh viên bắt đầu đi thực tập tại doanh nghiệp ban ngày, và học bổ trợ 1 tháng trực tuyến vào buổi tối. Mỗi tuần học 3 buổi từ 7:00 đến 9:30 để rèn. Nội dung lớp tối thường là seminar để sinh viên lĩnh hội được nhiều kiến thức nhất có thể, áp dụng trực tiếp vào công việc.               
+                5 tháng đầu tiên, sinh viên bắt buộc phải học toàn thời gian tại
+                trung tâm. Tháng thứ 6 sinh viên bắt đầu đi thực tập tại doanh
+                nghiệp ban ngày, và học bổ trợ 1 tháng trực tuyến vào buổi tối.
+                Mỗi tuần học 3 buổi từ 7:00 đến 9:30 để rèn. Nội dung lớp tối
+                thường là seminar để sinh viên lĩnh hội được nhiều kiến thức
+                nhất có thể, áp dụng trực tiếp vào công việc.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-3" aria-expanded="false" aria-controls="panel-collapse-3">
-                <span class="h6">Khi tôi đăng ký học toàn thời gian 6 tháng, tôi có được miễn nghĩa vụ quân sự hay không?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-3"
+                aria-expanded="false"
+                aria-controls="panel-collapse-3"
+              >
+                <span class="h6"
+                  >Khi tôi đăng ký học toàn thời gian 6 tháng, tôi có được miễn
+                  nghĩa vụ quân sự hay không?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-3" class="accordion-collapse collapse" aria-labelledby="panel-heading-3">
+            <div
+              id="panel-collapse-3"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-3"
+            >
               <div class="accordion-body">
-                Techmaster chứng nhận cho sinh viên trong thời gian học 6 tháng để sinh viên được miễn đi nghĩa vụ quân sự trong thời gian học. Ngay sau khi kết thúc khoá học, sinh viên phải đi xin việc ngay.
+                Techmaster chứng nhận cho sinh viên trong thời gian học 6 tháng
+                để sinh viên được miễn đi nghĩa vụ quân sự trong thời gian học.
+                Ngay sau khi kết thúc khoá học, sinh viên phải đi xin việc ngay.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-4" aria-expanded="false" aria-controls="panel-collapse-4">
-                <span class="h6">So với chương trình học chuyên ngành CNTT thì khoá học toàn thời gian 6 tháng có gì khác biệt?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-4"
+                aria-expanded="false"
+                aria-controls="panel-collapse-4"
+              >
+                <span class="h6"
+                  >So với chương trình học chuyên ngành CNTT thì khoá học toàn
+                  thời gian 6 tháng có gì khác biệt?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-4" class="accordion-collapse collapse" aria-labelledby="panel-heading-4">
+            <div
+              id="panel-collapse-4"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-4"
+            >
               <div class="accordion-body">
-                Nội dung khoá học toàn thời gian 6 tháng tập trung huấn luyện thành thục một kỹ năng lập trình cụ thể (Web hoặc Mobile) có nhu cầu tuyển dụng cao. Học xong là vào lập trình dự án. Còn đào tạo chuyên ngành CNTT sẽ có nhiều môn học nền tảng – nâng cao, không tập trung cụ thể. Sinh viên phải tự học, thực hành thêm.
+                Nội dung khoá học toàn thời gian 6 tháng tập trung huấn luyện
+                thành thục một kỹ năng lập trình cụ thể (Web hoặc Mobile) có nhu
+                cầu tuyển dụng cao. Học xong là vào lập trình dự án. Còn đào tạo
+                chuyên ngành CNTT sẽ có nhiều môn học nền tảng – nâng cao, không
+                tập trung cụ thể. Sinh viên phải tự học, thực hành thêm.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-5">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-5" aria-expanded="false" aria-controls="panel-collapse-5">
-                <span class="h6">Nếu sau khi tốt nghiệp khoá học toàn thời gian 6 tháng, tôi vẫn không xin được việc thì sao?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-5"
+                aria-expanded="false"
+                aria-controls="panel-collapse-5"
+              >
+                <span class="h6"
+                  >Nếu sau khi tốt nghiệp khoá học toàn thời gian 6 tháng, tôi
+                  vẫn không xin được việc thì sao?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-5" class="accordion-collapse collapse" aria-labelledby="panel-heading-5">
+            <div
+              id="panel-collapse-5"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-5"
+            >
               <div class="accordion-body">
-                Sau 60 ngày kể từ khi nhận bằng tốt nghiệp, nếu sinh viên không được cty nào nhận, Techmaster sẽ tuyển dụng lại. Thực tế thì ngay từ tháng thứ 6, Techmaster đã giới thiệu sinh viên đi thực tập có phụ cấp.
+                Sau 60 ngày kể từ khi nhận bằng tốt nghiệp, nếu sinh viên không
+                được cty nào nhận, Techmaster sẽ tuyển dụng lại. Thực tế thì
+                ngay từ tháng thứ 6, Techmaster đã giới thiệu sinh viên đi thực
+                tập có phụ cấp.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-6">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-6" aria-expanded="false" aria-controls="panel-collapse-6">
-                <span class="h6">Sau khi nhận được bằng tốt nghiệp, tôi nên học tiếp gì để trở thành một lập trình viên chuyên nghiệp?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-6"
+                aria-expanded="false"
+                aria-controls="panel-collapse-6"
+              >
+                <span class="h6"
+                  >Sau khi nhận được bằng tốt nghiệp, tôi nên học tiếp gì để trở
+                  thành một lập trình viên chuyên nghiệp?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-6" class="accordion-collapse collapse" aria-labelledby="panel-heading-6">
+            <div
+              id="panel-collapse-6"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-6"
+            >
               <div class="accordion-body">
-                Bạn có thể học thêm lớp Cấu trúc dữ liệu giải thuật 16 buổi nâng cao, lớp DevOps 32 buổi hoặc lớp AWS 30 buổi. Tất cả những lớp trên đều đáp ứng nhu cầu tuyển dụng rất cao ngoài thị trường, cung cấp cho học viên kỹ năng hữu ích mà trường đại học không dạy.
+                Bạn có thể học thêm lớp Cấu trúc dữ liệu giải thuật 16 buổi nâng
+                cao, lớp DevOps 32 buổi hoặc lớp AWS 30 buổi. Tất cả những lớp
+                trên đều đáp ứng nhu cầu tuyển dụng rất cao ngoài thị trường,
+                cung cấp cho học viên kỹ năng hữu ích mà trường đại học không
+                dạy.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-7">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-7" aria-expanded="false" aria-controls="panel-collapse-7">
-                <span class="h6">Tôi có được học thử lớp toàn thời gian trước khi nộp học phí?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-7"
+                aria-expanded="false"
+                aria-controls="panel-collapse-7"
+              >
+                <span class="h6"
+                  >Tôi có được học thử lớp toàn thời gian trước khi nộp học
+                  phí?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-7" class="accordion-collapse collapse" aria-labelledby="panel-heading-7">
+            <div
+              id="panel-collapse-7"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-7"
+            >
               <div class="accordion-body">
-                Techmaster cho phép học viên học thử trong 3 ngày đầu tiên. Nếu sv không hài lòng, Techmaster hoàn lại toàn bộ học phí còn lại trừ 1 triệu vnd học phí các buổi đã học và phí quản lý lớp.
+                Techmaster cho phép học viên học thử trong 3 ngày đầu tiên. Nếu
+                sv không hài lòng, Techmaster hoàn lại toàn bộ học phí còn lại
+                trừ 1 triệu vnd học phí các buổi đã học và phí quản lý lớp.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-8">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-8" aria-expanded="false" aria-controls="panel-collapse-8">
-                <span class="h6">Tôi đang học dở, giữa khoá học, có việc bận, ốm liệu có được bảo lưu?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-8"
+                aria-expanded="false"
+                aria-controls="panel-collapse-8"
+              >
+                <span class="h6"
+                  >Tôi đang học dở, giữa khoá học, có việc bận, ốm liệu có được
+                  bảo lưu?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-8" class="accordion-collapse collapse" aria-labelledby="panel-heading-8">
+            <div
+              id="panel-collapse-8"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-8"
+            >
               <div class="accordion-body">
-                Techmaster cho phép sinh viên bảo lưu 1 lần, phí bảo lưu là 500.000đ.
+                Techmaster cho phép sinh viên bảo lưu 1 lần, phí bảo lưu là
+                500.000đ.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h3 class="accordion-header" id="panel-heading-9">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collapse-9" aria-expanded="false" aria-controls="panel-collapse-9">
-                <span class="h6">Tôi là phụ huynh học viên học chương trình đào tạo toàn thời gian, tôi có thể biết tiến độ và kết quả học của con tôi không?</span>
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panel-collapse-9"
+                aria-expanded="false"
+                aria-controls="panel-collapse-9"
+              >
+                <span class="h6"
+                  >Tôi là phụ huynh học viên học chương trình đào tạo toàn thời
+                  gian, tôi có thể biết tiến độ và kết quả học của con tôi
+                  không?</span
+                >
               </button>
             </h3>
-            <div id="panel-collapse-9" class="accordion-collapse collapse" aria-labelledby="panel-heading-9">
+            <div
+              id="panel-collapse-9"
+              class="accordion-collapse collapse"
+              aria-labelledby="panel-heading-9"
+            >
               <div class="accordion-body">
-                Techmaster cung cấp đầy đủ thông tin: số buổi đi học, số buổi nghỉ, điểm số học viên.
+                Techmaster cung cấp đầy đủ thông tin: số buổi đi học, số buổi
+                nghỉ, điểm số học viên.
               </div>
             </div>
           </div>
@@ -715,32 +1726,61 @@
         <div class="container">
           <div class="row gx-6">
             <div class="col-12 col-lg-6 mb-5 mb-lg-0 order-lg-1">
-              <form class="needs-validation bg-white rounded px-4 py-4" novalidate>
+              <form
+                class="needs-validation bg-white rounded px-4 py-4"
+                novalidate
+              >
                 <h4 class="mb-3 text-primary">Đăng ký tư vấn trực tiếp</h4>
-                <p class="mb-4">Điền và gửi thông tin cá nhân để được tư vấn miễn phí về các chương trình học cho người mới bắt đầu.</p>
+                <p class="mb-4">
+                  Điền và gửi thông tin cá nhân để được tư vấn miễn phí về các
+                  chương trình học cho người mới bắt đầu.
+                </p>
                 <div class="form-floating mb-3">
-                  <input class="form-control" type="text" placeholder="Họ và tên" name="fullName" required>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Họ và tên"
+                    name="fullName"
+                    required
+                  />
                   <label for="fullName">Họ và tên</label>
                   <div class="invalid-feedback">
                     Thông tin này không được bỏ trống
                   </div>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" type="text" placeholder="Số điện thoại" name="phone" required>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Số điện thoại"
+                    name="phone"
+                    required
+                  />
                   <label for="phone">Số điện thoại</label>
                   <div class="invalid-feedback">
                     Thông tin này không được bỏ trống
                   </div>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" type="email" placeholder="Email" name="email">
+                  <input
+                    class="form-control"
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                  />
                   <label for="email">Email</label>
                   <div class="invalid-feedback">
                     Thông tin này không được bỏ trống
                   </div>
                 </div>
                 <div class="form-floating mb-3">
-                  <textarea class="form-control" placeholder="Ghi chú" name="note" id="" style="height: 120px;"></textarea>
+                  <textarea
+                    class="form-control"
+                    placeholder="Ghi chú"
+                    name="note"
+                    id=""
+                    style="height: 120px"
+                  ></textarea>
                   <label for="note">Ghi chú</label>
                 </div>
 
@@ -748,40 +1788,66 @@
               </form>
             </div>
             <div class="col-12 col-lg-6 text-white">
-              <hr class="border-white opacity-100 mb-4">
-  
+              <hr class="border-white opacity-100 mb-4" />
+
               <h4 class="fw-normal mb-4">TƯ VẤN VIÊN</h4>
-  
+
               <div class="row gy-3">
                 <div class="col-6 col-lg-12 col-xl-6 d-flex align-items-center">
                   <i class="fa-solid fa-phone fs-5 me-3"></i>
-                  <a class="text-link link-light fw-normal" href="tel:098 727 3764">Mr. Thịnh - 098 727 3764</a>
+                  <a
+                    class="text-link link-light fw-normal"
+                    href="tel:098 727 3764"
+                    >Mr. Thịnh - 098 727 3764</a
+                  >
                 </div>
                 <div class="col-6 col-lg-12 col-xl-6 d-flex align-items-center">
                   <i class="fa-solid fa-envelope fs-3 me-3"></i>
-                  <a class="text-link link-light fw-normal" href="mailto:thinh@techmaster.vn">thinh@techmaster.vn</a>
+                  <a
+                    class="text-link link-light fw-normal"
+                    href="mailto:thinh@techmaster.vn"
+                    >thinh@techmaster.vn</a
+                  >
                 </div>
               </div>
-  
-              <hr class="border-white opacity-100 mb-4 mt-5">
-  
+
+              <hr class="border-white opacity-100 mb-4 mt-5" />
+
               <h4 class="fw-normal mb-3">CƠ SỞ</h4>
               <ol>
                 <li class="py-2">
-                  <a target="_blank" class="text-link link-light" href="https://www.google.com/maps/place/48+P.+T%E1%BB%91+H%E1%BB%AFu,+Trung+V%C4%83n,+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@20.998029,105.7924504,17z/data=!3m1!4b1!4m5!3m4!1s0x3135acba8ad197a5:0xa55e51322131e722!8m2!3d20.998029!4d105.7946391?hl=vi-VN">Cơ sở Tố Hữu: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</a>
+                  <a
+                    target="_blank"
+                    class="text-link link-light"
+                    href="https://www.google.com/maps/place/48+P.+T%E1%BB%91+H%E1%BB%AFu,+Trung+V%C4%83n,+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@20.998029,105.7924504,17z/data=!3m1!4b1!4m5!3m4!1s0x3135acba8ad197a5:0xa55e51322131e722!8m2!3d20.998029!4d105.7946391?hl=vi-VN"
+                    >Cơ sở Tố Hữu: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố
+                    Hữu, Lê Văn Lương kéo dài, Hà Nội</a
+                  >
                 </li>
                 <li class="py-2">
-                  <a target="_blank" class="text-link link-light" href="https://www.google.com/maps/place/Techmaster/@21.013604,105.8443263,17z/data=!3m1!4b1!4m5!3m4!1s0x3135ab8ea079c829:0x1a3ebe79efa873b2!8m2!3d21.013604!4d105.846515?hl=vi-VN">Cơ sở Nguyễn Đình Chiểu: Số 14, ngõ 4, Nguyễn Đình Chiểu, Hà Nội</a>
+                  <a
+                    target="_blank"
+                    class="text-link link-light"
+                    href="https://www.google.com/maps/place/Techmaster/@21.013604,105.8443263,17z/data=!3m1!4b1!4m5!3m4!1s0x3135ab8ea079c829:0x1a3ebe79efa873b2!8m2!3d21.013604!4d105.846515?hl=vi-VN"
+                    >Cơ sở Nguyễn Đình Chiểu: Số 14, ngõ 4, Nguyễn Đình Chiểu,
+                    Hà Nội</a
+                  >
                 </li>
                 <li class="py-2">
-                  <a target="_blank" class="text-link link-light" href="https://www.google.com/maps/place/13+P.+D%E1%BB%8Bch+V%E1%BB%8Dng+H%E1%BA%ADu,+D%E1%BB%8Bch+V%E1%BB%8Dng+H%E1%BA%ADu,+C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i/@21.0331091,105.7876451,20z/data=!4m5!3m4!1s0x3135ab4bd70dc35b:0xb22b548b4dc3794!8m2!3d21.0330735!4d105.787729">Cơ sở Dịch Vọng Hậu: Tầng 5, số 13 Dịch Vọng Hậu, Cầu Giấy, Hà Nội</a>
+                  <a
+                    target="_blank"
+                    class="text-link link-light"
+                    href="https://www.google.com/maps/place/13+P.+D%E1%BB%8Bch+V%E1%BB%8Dng+H%E1%BA%ADu,+D%E1%BB%8Bch+V%E1%BB%8Dng+H%E1%BA%ADu,+C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i/@21.0331091,105.7876451,20z/data=!4m5!3m4!1s0x3135ab4bd70dc35b:0xb22b548b4dc3794!8m2!3d21.0330735!4d105.787729"
+                    >Cơ sở Dịch Vọng Hậu: Tầng 5, số 13 Dịch Vọng Hậu, Cầu Giấy,
+                    Hà Nội</a
+                  >
                 </li>
               </ol>
-  
-              <hr class="border-white opacity-100 mb-4 mt-5">
-  
+
+              <hr class="border-white opacity-100 mb-4 mt-5" />
+
               <h4 class="fw-normal mb-3">MẠNG XÃ HỘI</h4>
-  
+
               <div class="fs-3">
                 <a class="me-2" href="https://www.facebook.com/techmastervn/">
                   <i class="fa-brands fa-square-facebook"></i>
@@ -792,14 +1858,16 @@
               </div>
             </div>
           </div>
-          
         </div>
       </section>
     </main>
 
-    <footer class="text-center text-white py-5 bg-dark">TechMaster Việt Nam © 2022</footer>
+    <footer class="text-center text-white py-5 bg-dark">
+      TechMaster Việt Nam © 2022
+    </footer>
 
     <script src="./src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./src/js/main.js"></script>
   </body>
 </html>

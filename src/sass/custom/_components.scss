@@ -1,6 +1,7 @@
 // HERO
 .hero {
   background-color: $primary;
+  margin-top: 76px;
 
   @include media-breakpoint-up(lg) {
     background-image: linear-gradient(106deg, $primary 55%, #fff 55%);
@@ -80,13 +81,6 @@
   }
 }
 
-// CONTACT
-.contact {
-  .text-link:hover {
-    text-decoration: underline;
-  }
-}
-
 // COMPARE COURSES
 .compare-courses {
   .tab-pane {
@@ -113,4 +107,25 @@
       }
     }
   }
+}
+
+// FOOTER
+.fa-square-facebook:hover {
+  color: #c5d1ea;
+}
+
+.fa-youtube:hover {
+  color: #f33;
+}
+
+// SWIPER
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background: #007aff;
 }

@@ -4,7 +4,11 @@ $custom-theme-colors: (
 );
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
-// DISPLAY
+// ASPECT RATIO
+$custom-aspect-ratios: (
+  "5x3": calc(3 / 5 * 100%),
+);
+$aspect-ratios: map-merge($aspect-ratios, $custom-aspect-ratios);
 
 // // SPACING
 $custom-spacers: (

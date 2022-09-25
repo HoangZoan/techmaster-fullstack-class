@@ -9012,6 +9012,7 @@ img {
 
 .hero {
   background-color: #0f5298;
+  margin-top: 76px;
 }
 @media (min-width: 992px) {
   .hero {

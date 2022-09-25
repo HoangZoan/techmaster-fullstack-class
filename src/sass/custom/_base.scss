@@ -14,3 +14,15 @@ img {
     font-size: 16px;
   }
 }
+
+.btn.btn-outline-primary {
+  border: 1px solid transparent;
+}
+
+.btn.btn-outline-primary:hover {
+  border: 1px solid #fff;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
