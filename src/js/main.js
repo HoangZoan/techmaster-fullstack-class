@@ -52,7 +52,17 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   },
 });
 
-//
-const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-  target: "#header-nav",
+const testimonialsSwiper = new Swiper(".testimonials-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 48,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+  },
 });
