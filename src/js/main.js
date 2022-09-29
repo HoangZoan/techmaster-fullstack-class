@@ -2,6 +2,13 @@
 
 // Fetch all the forms we want to apply custom Bootstrap validation styles to
 const form = document.querySelector(".needs-validation");
+const successAlert = document.getElementById("form-alert-success");
+const dangerAlert = document.getElementById("form-alert-danger");
+
+const closeAlert = () => {
+  successAlert.classList.remove("d-none");
+  dangerAlert.classList.remove("d-none");
+};
 
 // Loop over them and prevent submission
 form.addEventListener("submit", (event) => {
@@ -10,8 +17,31 @@ form.addEventListener("submit", (event) => {
     event.stopPropagation();
   } else {
     const formData = [...new FormData(form)];
-    const data = Object.fromEntries(formData);
-    console.log(data);
+    const { email, fullName, note, phone } = Object.fromEntries(formData);
+    const data = {
+      FullName: fullName,
+      Email: email,
+      Phone: phone,
+      Info: note,
+      Link: window.location.href,
+      ItemId: "n7zUXBgO",
+    };
+
+    fetch("https://techmaster.vn/submit-advisory", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(() => {
+        closeAlert();
+        successAlert.classList.add("d-flex");
+      })
+      .catch((err) => {
+        closeAlert();
+        dangerAlert.classList.add("d-flex");
+      });
   }
 
   form.classList.add("was-validated");

@@ -1,15 +1,15 @@
 {
   "name": "techmaster-fullstack-course",
   "version": "1.0.0",
-  "source": "index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.7.0",
-    "parcel": "^2.7.0"
+    "sass": "^1.55.0"
   }
 }
